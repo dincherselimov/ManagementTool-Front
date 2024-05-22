@@ -24,7 +24,7 @@ export default function HomePage() {
           <input type="text" placeholder="Item Name" value={itemName} onChange={(e) => setItemName(e.target.value)} style={{ color: "red" }} />
           <input type="text" placeholder="Item Description" value={itemDescription} onChange={(e) => setItemDescription(e.target.value)} style={{ color: "black" }} />
           <input type="text" placeholder="Item Size" value={itemSize} onChange={(e) => setItemSize(e.target.value)} style={{ color: "black" }} />
-          <button type="submit">Submit</button>
+          <button type="submit" style={{ color: "black" }}>Submit</button>
         </div>
       </form>
     </section>
