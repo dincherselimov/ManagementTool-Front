@@ -1,0 +1,64 @@
+/* Register Form Styles */
+.register-form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.register-input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.register-input:focus {
+    border-color: #0070f3;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 112, 243, 0.5);
+}
+
+.register-button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register_title {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.register-button:hover {
+    background-color: #218838;
+}
+
+.register-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .register-form {
+        padding: 15px;
+    }
+
+    .register-input, .register-button {
+        width: calc(100% - 30px);
+    }
+}

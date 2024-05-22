@@ -10,9 +10,16 @@ export const login = async (email: string, password: string): Promise<types.Logi
       },
       body: JSON.stringify({ email, password })
     });
+
     if (!response.ok) {
-      throw new Error('Error logging in');
+      if (response.status === 401) {
+        const errorData = await response.json();
+        throw new Error(errorData.message); 
+      } else {
+        throw new Error('An error occurred');
+      }
     }
+
     const data: types.LoginResponse = await response.json();
     return data;
   } catch (error: any) {
@@ -47,5 +54,7 @@ export const logout = () => {
 };
 
 export const isAuth = () => {
+  console.log(localStorage.getItem('token'));
   return localStorage.getItem('token');
+
 };

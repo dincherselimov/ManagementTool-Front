@@ -1,10 +1,9 @@
-// components/ProtectedRoute.js
 import { useRouter } from 'next/router';
 import { useEffect, ReactNode } from 'react'; // Import ReactNode type
 import { useAuth } from '../hooks/useAuth';
 
 interface ProtectedRouteProps {
-  children: ReactNode; // Explicitly define children prop type
+  children: ReactNode; 
 }
 
 const ProtectedRoute = ({ children }: ProtectedRouteProps) => {
@@ -13,7 +12,7 @@ const ProtectedRoute = ({ children }: ProtectedRouteProps) => {
 
   useEffect(() => {
     if (!isAuthenticated) {
-      router.push('/login');
+      router.push('/');
     }
   }, [isAuthenticated, router]);
 

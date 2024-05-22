@@ -1,21 +1,28 @@
-import { useState } from 'react';
 import Link from 'next/link';
+import { useAuth } from '../../hooks/useAuth'; 
 
 export default function Home() {
-  return (
+  const { isAuthenticated, logout } = useAuth();
 
+  return (
     <section>
-    <div className="container">
+      <div className="container">
         <h1>Welcome to the Home Page</h1>
         <div className="button-container">
-            <Link href="/login">
-            <button className="login-button">Login</button>
-            </Link>
-            <Link href="/register">
-            <button className="register-button">Register</button>
-            </Link>
+          {!isAuthenticated ? (
+            <>
+              <Link href="/login">
+                <button className="login-button-home">Login</button>
+              </Link>
+              <Link href="/register">
+                <button className="register-button-home">Register</button>
+              </Link>
+            </>
+          ) : (
+            <button onClick={logout} className="logout-button-home">Logout</button>
+          )}
         </div>
-        </div>
+      </div>
     </section>
   );
 }

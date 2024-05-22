@@ -10,14 +10,14 @@ export const useAuth = () => {
   useEffect(() => {
     const token = isAuth();
     setIsAuthenticated(!!token);
-  }, []);
-
+  }, [isAuth]);
+  
   const loginHandler = async (email:string, password:string) => {
     try {
       const response = await login(email, password);
       localStorage.setItem('token', response.token); // Assuming response contains a token
       setIsAuthenticated(true);
-      router.push('/dashboard');
+      router.push('/');
     } catch (error:any) {
       console.error('Login failed:', error.message);
     }
@@ -35,8 +35,9 @@ export const useAuth = () => {
   const logoutHandler = () => {
     logout();
     setIsAuthenticated(false);
-    router.push('/login');
+    router.push('/');
   };
+
 
   return { isAuthenticated, login: loginHandler, register: registerHandler, logout: logoutHandler };
 };

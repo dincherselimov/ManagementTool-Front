@@ -1,34 +1,81 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
 .container {
-  max-width: 400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 h1 {
-  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
   margin-bottom: 20px;
 }
 
+/* Button Container */
 .button-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
 }
 
-.login-button,
-.register-button {
+/* Buttons */
+button {
   padding: 10px 20px;
-  border-radius: 6px;
-  background-color: #007bff;
+  font-size: 1rem;
   color: #fff;
+  background-color: #0070f3;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-.login-button:hover,
-.register-button:hover {
-  background-color: #0056b3;
+button:hover {
+  background-color: #005bb5;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.3);
+}
+
+/* Specific Button Styles */
+.login-button-home {
+  background-color: #0070f3;
+}
+
+.register-button-home{
+  background-color: #28a745;
+}
+
+.register-button-home:hover {
+  background-color: #218838;
+}
+
+.register-button-home:focus {
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.3);
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .button-container {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+ .register-button-home, .login-button-home {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+  }
 }
