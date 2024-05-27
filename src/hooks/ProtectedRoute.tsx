@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import { useEffect, ReactNode } from 'react'; // Import ReactNode type
-import { useAuth } from '../hooks/useAuth';
+import { useAuth } from './useAuth';
 
 interface ProtectedRouteProps {
   children: ReactNode; 
