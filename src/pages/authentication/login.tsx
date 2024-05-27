@@ -1,4 +1,4 @@
-import Login from "../components/Login";
+import Login from "../../components/Login";
 import { useAuth } from "@/hooks/useAuth";
 import { redirectIfAuthenticated } from "@/hooks/authRedirect";
 
