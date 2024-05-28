@@ -2,32 +2,35 @@ import Link from 'next/link';
 import { useAuth } from '../hooks/useAuth';
 
 /**
- * This should be the navbar
- * For MVP it is done as home page
+ * Navbar component
  * @returns 
  */
 export default function Navbar() {
   const { isAuthenticated, logout } = useAuth();
 
   return (
-    <section>
+    <nav className="navbar">
       <div className="container">
-        <h1>Welcome to the Home Page</h1>
-        <div className="button-container">
+        <div className="navbar-brand">
+          <Link href="/">
+          Home
+          </Link>
+        </div>
+        <div className="navbar-menu">
           {!isAuthenticated ? (
             <>
-              <Link href="/authentication/login">
-                <button className="login-button-home">Login</button>
+              <Link className="navbar-item" href="/authentication/login">
+                  Login
               </Link>
-              <Link href="/authentication/register">
-                <button className="register-button-home">Register</button>
+              <Link className='navbar-item' href="/authentication/register">
+                  Register
               </Link>
             </>
           ) : (
-            <button onClick={logout} className="logout-button-home">Logout</button>
+            <div onClick={logout} className="navbar-item logout-button">Logout</div>
           )}
         </div>
       </div>
-    </section>
+    </nav>
   );
 }

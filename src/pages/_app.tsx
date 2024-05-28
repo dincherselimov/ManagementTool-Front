@@ -2,6 +2,10 @@ import "@/styles/globals.css";
 import "@/styles/home.css";
 import "@/styles/login.css";
 import "@/styles/register.css";
+import "@/styles/navbar.css";
+import "@/styles/intro.css";
+import "@/styles/categories.css";
+import "@/styles/footer.css";
 
 import type { AppProps } from "next/app";
 

@@ -17,7 +17,7 @@ const Login = () => {
       localStorage.setItem('token', response.token); 
       
       // Redirect to dashboard or any protected route
-      router.push('/home/HomePage'); 
+      router.push('/posts/Home'); 
     } catch (error:any) {
       setError(error.message); // Set the error message
     }
