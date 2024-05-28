@@ -1,5 +1,6 @@
-import { useAuth } from '../../hooks/useAuth'; 
-import Navbar from '@/components/Navbar';
+import Categories from '@/components/Categories';
+import Layout from './Layout';
+import Intro from '@/components/Intro';
 
 /**
  * This should be the navbar
@@ -8,6 +9,10 @@ import Navbar from '@/components/Navbar';
  */
 export default function Home() {
   return (
-   <Navbar/>
-  );
+
+    <Layout>
+        <Intro/>
+        <Categories/>
+    </Layout>
+);
 }
