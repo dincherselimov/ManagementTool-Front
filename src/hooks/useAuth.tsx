@@ -8,14 +8,18 @@ export const useAuth = () => {
   const router = useRouter();
 
   useEffect(() => {
-    const token = isAuth();
-    setIsAuthenticated(!!token);
-  }, [isAuth]);
-  
+    const checkAuth = async () => {
+      const token = localStorage.getItem('token');
+      setIsAuthenticated(!!token);
+    };
+
+    checkAuth();
+  }, []);
+
   const loginHandler = async (email:string, password:string) => {
     try {
       const response = await login(email, password);
-      localStorage.setItem('token', response.token); // Assuming response contains a token
+      localStorage.setItem('token', response.token);
       setIsAuthenticated(true);
       router.push('/');
     } catch (error:any) {
@@ -26,7 +30,7 @@ export const useAuth = () => {
   const registerHandler = async (username:string, email:string, password:string) => {
     try {
       await register(username, email, password);
-      router.push('/login'); // Redirect to login page after successful registration
+      router.push('/login');
     } catch (error:any) {
       console.error('Registration failed:', error.message);
     }
@@ -34,10 +38,10 @@ export const useAuth = () => {
 
   const logoutHandler = () => {
     logout();
+    localStorage.removeItem('token');
     setIsAuthenticated(false);
     router.push('/');
   };
-
 
   return { isAuthenticated, login: loginHandler, register: registerHandler, logout: logoutHandler };
 };

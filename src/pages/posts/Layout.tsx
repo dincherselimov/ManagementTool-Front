@@ -6,7 +6,7 @@ export default function PageLayout({ children }: { children: ReactNode }) {
   return (
     <div>
         <Navbar/>
-       <main>{children}</main>
+         <main>{children}</main>
        <Footer/>
     </div>
   );
