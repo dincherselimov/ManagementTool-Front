@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { useRouter } from 'next/router';
 import { login } from '../pages/api/auth';
+import { useRouter } from 'next/router';
 
 const Login = () => {
   const [email, setEmail] = useState('');

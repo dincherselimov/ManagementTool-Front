@@ -1,11 +1,11 @@
 import Login from "../../components/Login";
 import { useAuth } from "@/hooks/useAuth";
-import { redirectIfAuthenticated } from "@/hooks/authRedirect";
+import { RedirectIfAuthenticated } from "@/hooks/authRedirect";
 
 const LoginPage = () => {
   const { isAuthenticated } = useAuth();
 
-  redirectIfAuthenticated(isAuthenticated, '/');
+  RedirectIfAuthenticated(isAuthenticated, '/');
 
   return (
     <div>
