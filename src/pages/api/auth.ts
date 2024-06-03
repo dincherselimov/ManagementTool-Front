@@ -3,7 +3,7 @@ import * as types from './typesInterface';
 
 export const login = async (email: string, password: string): Promise<types.LoginResponse> => {
   try {
-    const response = await fetch('http://localhost:3001/api/login', {
+    const response = await fetch('http://localhost:3000/api/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -29,7 +29,7 @@ export const login = async (email: string, password: string): Promise<types.Logi
 
 export const register = async (username: string, email: string, password: string): Promise<types.RegisterResponse> => {
   try {
-    const response = await fetch('http://localhost:3001/api/register', {
+    const response = await fetch('http://localhost:3000/api/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
-import { useRouter } from 'next/router';
+import { useRouter, } from 'next/router';
 
-export const redirectIfAuthenticated = (isAuthenticated: unknown, destination = '/') => {
+export const RedirectIfAuthenticated = (isAuthenticated: unknown, destination = '/') => {
   const router = useRouter();
 
   useEffect(() => {

@@ -1,12 +1,12 @@
 import Register from "@/components/Register";
-import { redirectIfAuthenticated } from "@/hooks/authRedirect";
+import { RedirectIfAuthenticated } from "@/hooks/authRedirect";
 import { useAuth } from "@/hooks/useAuth";
 
 const RegisterPage = () => {
   
   const { isAuthenticated } = useAuth();
 
-  redirectIfAuthenticated(isAuthenticated, '/');
+  RedirectIfAuthenticated(isAuthenticated, '/');
 
   return (
     <div>

@@ -6,6 +6,10 @@ import "@/styles/navbar.css";
 import "@/styles/intro.css";
 import "@/styles/categories.css";
 import "@/styles/footer.css";
+import "@/styles/timereport.css";
+import "@/styles/timereporttable.css";
+
+
 
 import type { AppProps } from "next/app";
 

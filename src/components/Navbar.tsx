@@ -17,6 +17,7 @@ export default function Navbar() {
           </Link>
         </div>
         <div className="navbar-menu">
+        <Link className='navbar-item' href="/profile/myProfile">Profile</Link>
           {!isAuthenticated ? (
             <>
               <Link className="navbar-item" href="/authentication/login">

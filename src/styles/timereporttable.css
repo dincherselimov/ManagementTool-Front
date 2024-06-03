@@ -1,0 +1,60 @@
+.container-table {
+    width: 1300px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .main-container{
+
+    margin-top:50px;
+  }
+
+  .title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom:40px;
+  }
+  
+  .header {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .row:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .row:nth-child(odd) {
+    background-color: #fff;
+  }
+  
+  .cell {
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .cell:first-child {
+    border-left: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  
+  .cell:last-child {
+    border-right: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
