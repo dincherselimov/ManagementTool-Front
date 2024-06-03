@@ -31,6 +31,15 @@ const AllTimeReports = () => {
     fetchTimeReports();
   }, []);
 
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const year = date.getFullYear();
+    return `${day}-${month}-${year}`;
+};
+
+
   return (
     <div className='main-container'>
         <h1 className="title">All Time Reports</h1>
@@ -43,7 +52,7 @@ const AllTimeReports = () => {
           <th className="header">End Time</th>
           <th className="header">Description</th>
           <th className="header">Total Hours</th>
-          <th className="header">Date</th>
+          <th className="header">Date D/M/Y</th>
         </tr>
       </thead>
       <tbody>
@@ -54,7 +63,7 @@ const AllTimeReports = () => {
             <td className="cell">{report.end_time}</td>
             <td className="cell">{report.description}</td>
             <td className="cell">{report.total_hours_for_day}</td>
-            <td className="cell">{report.date}</td>
+            <td className="cell">{formatDate(report.date)}</td>
           </tr>
         ))}
       </tbody>
