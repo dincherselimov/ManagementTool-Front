@@ -10,5 +10,3 @@ export const RedirectIfAuthenticated = (isAuthenticated: unknown, destination = 
     }
   }, [isAuthenticated, destination, router]);
 };
-
-
