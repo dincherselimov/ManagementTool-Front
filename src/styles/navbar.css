@@ -1,63 +1,83 @@
+/* styles.css */
+
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Navbar styles */
-  .navbar {
-    background: linear-gradient(to right, #1f4037, #99f2c8);
-    color: #fff;
-    padding: 1rem 0;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
-  
-  .navbar-brand a {
-    color: #fff;
-    font-size: 1.5rem;
-    text-decoration: none;
-  }
-  
-  .navbar-menu {
-    display: flex;
-    align-items: center;
-  }
-  
-  .navbar-item {
-    margin-left: 1rem;
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    transition: background-color 0.3s, border-color 0.3s;
-    font-size: 20px;
-  }
-  
-  .navbar-item {
-    background: rgba(0, 0, 0, 0.5);
-    border-color: #fff;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .navbar-item:hover {
-    background: rgba(204, 133, 133, 0.5);
-    border-color: #fff;
-  }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-  .logout-button {
-    cursor: pointer;
-    background-color: #e74c3c;
-    border-color: #e74c3c;
-    color: #fff;
-  }
-  
-  .logout-button:hover {
-    background-color: #c0392b;
-    border-color: #c0392b;
-  }
+.navbar {
+  background-color: #333;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-item {
+  margin-left: 1rem;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar-item:hover {
+  color: #f0a500;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 36px;
+  left: 0;
+  background-color: #444;
+  padding: 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #555;
+}
+
+.logout-button {
+  background-color: #e74c3c;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+}
