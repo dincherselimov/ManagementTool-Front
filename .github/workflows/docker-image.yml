@@ -22,8 +22,8 @@ jobs:
       uses: docker/login-action@v1
       with:
         username: 'dincherselimov'
-        password: 9611228346dD@
-
+        password: '9611228346dD@'
+        
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
       with:
