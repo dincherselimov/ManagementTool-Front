@@ -1,18 +1,16 @@
-# Use the official Node.js image.
-# https://hub.docker.com/_/node
-FROM node:16-alpine
+# Use an official Node.js runtime as a parent image
+FROM node:18
 
-# Create and change to the app directory.
-WORKDIR /usr/src/app
+# Set the working directory
+WORKDIR /app
 
-# Copy application dependency manifests to the container image.
-# A wildcard is used to ensure both package.json AND package-lock.json are copied.
+# Copy package.json and package-lock.json (or yarn.lock)
 COPY package*.json ./
 
-# Install production dependencies.
+# Install dependencies
 RUN npm install
 
-# Copy local code to the container image.
+# Copy the rest of your application code
 COPY . .
 
 # Build the Next.js app
@@ -21,5 +19,5 @@ RUN npm run build
 # Expose the port the app runs on
 EXPOSE 3000
 
-# Run the Next.js app
+# Start the Next.js app
 CMD ["npm", "start"]
