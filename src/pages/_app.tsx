@@ -8,8 +8,9 @@ import "@/styles/categories.css";
 import "@/styles/footer.css";
 import "@/styles/timereport.css";
 import "@/styles/timereporttable.css";
-
-
+import "@/styles/hero.css";
+import "@/styles/features.css";
+import "@/styles/overview.css";
 
 import type { AppProps } from "next/app";
 

@@ -18,9 +18,12 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="container">
         <div className="navbar-brand">
-          <Link href="/">Home</Link>
+          <Link className='logo-name' href="/">ZenTTechnology</Link>
         </div>
         <div className="navbar-menu">
+          <Link className="navbar-item" href="/">Features</Link>
+          <Link className="navbar-item" href="/">Blog</Link>
+          <Link className="navbar-item" href="/">Contact sales</Link>
           <div className="navbar-item dropdown" onClick={toggleDropdown}>
             <span>Apps</span>
             {dropdownOpen && (

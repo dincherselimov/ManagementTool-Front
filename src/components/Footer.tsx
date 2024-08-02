@@ -2,27 +2,48 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="footer-container">
-      <div className="footer-content">
-        <div className="footer-section">
-          <h3>About Us</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <footer className="footer">
+    <div className="footer-container">
+        <div className="logo">
+            <span>ZenTTechnology</span>
         </div>
-        <div className="footer-section">
-          <h3>Contact Us</h3>
-          <p>Email: info@example.com</p>
-          <p>Phone: 123-456-7890</p>
+        <div className="columns">
+            <div className="column">
+                <h3>Product</h3>
+                <ul>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Platform</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Enterprise</a></li>
+                </ul>
+            </div>
+            <div className="column">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Get started</a></li>
+                    <li><a href="#">Tools</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">FAQs</a></li>              
+                </ul>
+            </div>
+            <div className="column">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
         </div>
-        <div className="footer-section">
-          <h3>Follow Us</h3>
-          <p>Connect with us on social media:</p>
-          <div className="social-icons">
-            <a href="#"><i className="fab fa-facebook-f"></i></a>
-            <a href="#"><i className="fab fa-twitter"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
-          </div>
+        <div className="newsletter">
+            <h3>Subscribe Our Newsletter</h3>
+            <div className="inputGroup">
+                <input type="email" placeholder="Enter your email" />
+                <button>Subscribe</button>
+            </div>
         </div>
-      </div>
-    </footer>
+    </div>
+</footer>
   );
 }

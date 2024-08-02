@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "apifront": "file:",
     "axios": "^1.7.1",
     "cors": "^2.8.5",
     "json2csv": "^6.0.0-alpha.2",
