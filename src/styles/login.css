@@ -1,11 +1,14 @@
-/* Login Form Styles */
+.login_container{
+  margin: 200px;
+}
+
 .login-form {
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: transparent;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
@@ -62,3 +65,22 @@
         width: calc(100% - 30px);
     }
 }
+
+
+.login-container {
+    background-color: #01588c;
+    background-image: linear-gradient(283deg, #01588c 0%, #044a33 100%);
+    
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-section {
+    text-align: center;
+  }
+  
+  .loginTitle{
+    color:white
+  }

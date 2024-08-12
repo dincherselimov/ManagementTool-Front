@@ -1,3 +1,4 @@
+import React from "react";
 import Login from "../../components/Login";
 import { useAuth } from "@/hooks/useAuth";
 import { RedirectIfAuthenticated } from "@/hooks/authRedirect";
@@ -8,9 +9,11 @@ const LoginPage = () => {
   RedirectIfAuthenticated(isAuthenticated, '/');
 
   return (
-    <div>
-      <h1 className="login_title">Login Page</h1>
-      <Login />
+    <div className='login-container'>
+      <div className='login-section'>
+        <h1 className='loginTitle'>Login Page</h1>
+        <Login />
+      </div>
     </div>
   );
 };
