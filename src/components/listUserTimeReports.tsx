@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Parser } from 'json2csv';
 
 interface TimeReport {
+    id: number;
     name: string;
     start_time: string;
     end_time: string;
@@ -32,6 +33,13 @@ const ListUserTimeReports = () => {
         fetchData();
     }, []);
 
+    const handleDelete = async (id: number) => {
+      
+    };
+
+    const handleUpdate = async(id: number) => {
+
+    };
 
     const formatDate = (dateString: string) => {
         const date = new Date(dateString);
@@ -78,17 +86,34 @@ const ListUserTimeReports = () => {
                                 <th className="header">Description</th>
                                 <th className="header">Total Hours</th>
                                 <th className="header">Date D/M/Y</th>
+                                <th className="header">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {timeReports.map((report, index) => (
-                                <tr key={index} className="row">
+                            {timeReports.map((report) => (
+                                <tr key={report.id} className="row">
                                     <td className="cell">{report.name}</td>
                                     <td className="cell">{report.start_time}</td>
                                     <td className="cell">{report.end_time}</td>
                                     <td className="cell">{report.description}</td>
                                     <td className="cell">{report.total_hours_for_day}</td>
                                     <td className="cell">{formatDate(report.date)}</td>
+                                    <td className="cell">
+                                        <button 
+                                            className="delete-button" 
+                                            onClick={() => handleDelete(report.id)}
+                                        >
+                                            Delete
+                                        </button>
+                                    </td>
+                                    <td className="cell">
+                                        <button 
+                                            className="update-button" 
+                                            onClick={() => handleUpdate(report.id)}
+                                        >
+                                            Update
+                                        </button>
+                                    </td>
                                 </tr>
                             ))}
                         </tbody>
