@@ -125,10 +125,13 @@ a {
 }
 
 .logo-name {
-  color: #023020;
   font-size: 2rem;
   font-weight: bold;
   text-decoration: none;
+  background: linear-gradient(283deg, #01588c 0%, #044a33 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .get-started {

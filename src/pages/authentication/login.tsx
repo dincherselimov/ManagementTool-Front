@@ -11,7 +11,7 @@ const LoginPage = () => {
   return (
     <div className='login-container'>
       <div className='login-section'>
-        <h1 className='loginTitle'>Login Page</h1>
+        <h1 className='loginTitle'>Welcome to ZenTTech</h1>
         <Login />
       </div>
     </div>

@@ -23,6 +23,7 @@ const TimeReportComponent = () => {
 
     return (
         <div className="form-container-report">
+            <h1 className="form-title">Submit you daily work</h1>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="name">Name:</label>
@@ -33,32 +34,32 @@ const TimeReportComponent = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="form-control"
+                        className="form-control-report"
                         placeholder="Enter your name"
                     />
                 </div>
                 <div className="form-group">
                     <label htmlFor="startTime">Start Time:</label>
                     <input
-                        type="time"
+                        type="datetime-local"
                         id="startTime"
                         name="startTime"
                         value={formData.startTime}
                         onChange={handleChange}
                         required
-                        className="form-control"
+                        className="form-control-report"
                     />
                 </div>
                 <div className="form-group">
                     <label htmlFor="endTime">End Time:</label>
                     <input
-                        type="time"
+                        type="datetime-local"
                         id="endTime"
                         name="endTime"
                         value={formData.endTime}
                         onChange={handleChange}
                         required
-                        className="form-control"
+                        className="form-control-report"
                     />
                 </div>
                 <div className="form-group">
@@ -70,7 +71,7 @@ const TimeReportComponent = () => {
                         value={formData.totalHoursWorkedForTheDay}
                         onChange={handleChange}
                         required
-                        className="form-control"
+                        className="form-control-report"
                         placeholder="Enter your total hours worked for the day"
                     />
                 </div>
@@ -82,7 +83,7 @@ const TimeReportComponent = () => {
                         value={formData.description}
                         onChange={handleChange}
                         required
-                        className="form-control"
+                        className="form-control-report"
                         placeholder="Write what you did"
                     />
                 </div>
@@ -95,10 +96,10 @@ const TimeReportComponent = () => {
                         value={formData.date}
                         onChange={handleChange}
                         required
-                        className="form-control"
+                        className="form-control-report"
                     />
                 </div>
-                <button type="submit" className="btn-submit btn-primary">Submit</button>
+                <button type="submit" className="btn-submit">Submit</button>
             </form>
         </div>
     );

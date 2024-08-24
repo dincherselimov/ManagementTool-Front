@@ -1,4 +1,3 @@
-// pages/api/auth.ts
 import * as types from './typesInterface';
 
 export const login = async (email: string, password: string): Promise<types.LoginResponse> => {

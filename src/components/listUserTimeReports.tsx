@@ -74,8 +74,14 @@ const ListUserTimeReports = () => {
             {loading && <p>Loading...</p>}
             {error && <p>Error: {error}</p>}
 
+            <div className='user-info'>
+                <h1 className='user-info-name'>Welcome, Username</h1>
+                <h1 className='user-info-email'>Email: Email</h1>
+            </div>
+      
             <div className='main-container'>
-                <h1 className='title'>Your Personal Time Reports</h1>
+                
+                <h1 className='reprot-title'>Your Personal Time Reports</h1>
                 <div className="container-table">
                     <table className="table">
                         <thead>
@@ -86,7 +92,8 @@ const ListUserTimeReports = () => {
                                 <th className="header">Description</th>
                                 <th className="header">Total Hours</th>
                                 <th className="header">Date D/M/Y</th>
-                                <th className="header">Actions</th>
+                                <th className="header">Action Delete</th>
+                                <th className="header">Action Update</th>
                             </tr>
                         </thead>
                         <tbody>

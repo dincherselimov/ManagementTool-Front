@@ -11,7 +11,7 @@ export default function TimeReport() {
     if (!isAuthenticated) {
       router.push('/authentication/login');
     }
-  }, []); // Empty dependency array to run this effect only once on component mount
+  }, []); 
 
   return (
     <Layout>

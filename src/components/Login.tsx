@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { login } from '../pages/api/auth';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -46,6 +47,8 @@ const Login = () => {
           style={{ color: 'black' }}
         />
         <button className="login-button" type="submit">Login</button>
+        <p className="register-login-text">Not registered yet?</p>
+        <Link className='login-in-reg-page' href="/authentication/register">Register in</Link>
       </form>
     </div>
   );

@@ -1,7 +1,5 @@
-/* TimeReport.css */
-
 .form-container-report {
-    background-color: #f9f9f9;
+    background-color: #defad58c;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -18,25 +16,33 @@
     align-items: center;
 }
 
-label {
-    display: inline-block;
-    width: 30%; /* Adjust the width as needed */
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: black;
+.form-title{
+    font-size:24px;
+    color:black;
+    margin:0px auto;
+    display:flex;
+    justify-content:center;
+    padding-bottom:20px;
+    font-weight:600;
 }
 
-input[type="text"],
-input[type="time"],
-input[type="number"],
-input[type="date"],
+label {
+    display: inline-block;
+    width: 30%;
+    margin-bottom: 5px;
+    font-size:20px;;
+    color:black;
+}
+
+.form-control-report,
 textarea {
-    width: 70%; /* Adjust the width as needed */
+    width: 70%; 
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
     color:black;
+    border-color:green;
 }
 
 textarea {
@@ -45,7 +51,7 @@ textarea {
 }
 
 .btn-submit {
-    background-color: #007bff;
+    background-color: #2ecc71;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -55,7 +61,6 @@ textarea {
 }
 
 .btn:hover {
-    background-color: #0056b3;
 }
 
 
@@ -72,7 +77,6 @@ textarea {
 }
 
 .generate-file-button {
-    
         float: right;
         padding: 10px 20px;
         font-size: 1rem;
@@ -82,5 +86,4 @@ textarea {
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.3s ease;
-    
-}
+    }

@@ -1,11 +1,33 @@
-/* Register Form Styles */
+.register-container {
+    background-color: #01588c;
+    background-image: linear-gradient(283deg, #01588c 0%, #044a33 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-section {
+    text-align: center;
+}
+
+.register-title {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.register-subtitle{
+    font-size:1.3rem;
+}
+
 .register-form {
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: transparent;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
@@ -17,6 +39,24 @@
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
+    color: black;
+}
+
+.register-login-text{
+    margin-bottom:10px;
+    margin-top:10px;
+}
+
+.login-in-reg-page {
+    color: #0070f3;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.login-in-reg-page:hover {
+    color: #005bb5;
+    text-decoration: underline;
 }
 
 .register-input:focus {
@@ -30,26 +70,20 @@
     padding: 10px;
     font-size: 1rem;
     color: #fff;
-    background-color: #28a745;
+    background-color: #0070f3;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.register_title {
-    display: flex;
-    justify-content: center;
-    padding-top: 100px;
-}
-
 .register-button:hover {
-    background-color: #218838;
+    background-color: #005bb5;
 }
 
 .register-button:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.3);
+    box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.3);
 }
 
 /* Responsive Design */

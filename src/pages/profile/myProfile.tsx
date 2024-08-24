@@ -12,11 +12,12 @@ export default function MyProfile() {
         if (!isAuthenticated) {
           router.push('/authentication/login');
         }
-      }, []); // Empty dependency array to run this effect only once on component mount
+      }, []); 
 
       
   return (
     <Layout>
+    
      <ListUserTimeReports/>
     </Layout>
   );

@@ -20,7 +20,10 @@
   .overview-title {
     font-size: 3.5rem;
     margin-bottom: 40px;
-    color: #2d3748; /* Dark text color */
+    background: linear-gradient(283deg, #01588c 0%, #044a33 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
   
   .overview-features {
@@ -61,7 +64,10 @@
   
   .feature-text p {
     font-size: 1rem;
-    color: #718096; /* Light text color */
+    background: linear-gradient(283deg, #01588c 0%, #044a33 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
   
   .overview-illustration {

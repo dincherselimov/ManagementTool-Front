@@ -5,7 +5,7 @@ export default function Hero () {
     return (
         <div className="hero">
         <div className="hero-content">
-          <h1>Your website, beyond expectations</h1>
+          <h1>ZenTTech, beyond expectations</h1>
           <p>Make your website wonderful and build beyond your expectations.</p>
           <div className="hero-buttons">
             <a href="#get-started" className="btn btn-primary">Get started</a>
